@@ -1,12 +1,9 @@
 #mobileNav {
-  background: rgba(5, 3, 27, 0.863);
-  color: blue;
-  height: 20vh;
+  background: white;
+  color: rgb(201, 238, 238);
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  font-size: 3rem;
-  width: 20vw;
-  margin: 2rem;
-  border-radius: 50px;
+  font-size: 2rem;
+  padding: 1rem;
 }

@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import useTypewriter from '../../hooks/useTypewriter';
 import './Nav.css';
 
 const Nav = () => {
-  return <div id='mobileNav'>populating text</div>;
+  const name = 'Corbin Taylor';
+  const [text] = useTypewriter(name);
+  return <div id='mobileNav'>{text}</div>;
 };
 
 export default Nav;
