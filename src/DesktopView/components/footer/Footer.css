@@ -1,0 +1,12 @@
+#footerBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: white;
+  min-height: 10vh;
+  display: flex;
+  width: 100%;
+  font-size: 40px;
+  justify-content: space-evenly;
+  align-items: center;
+}
