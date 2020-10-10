@@ -1,9 +1,13 @@
 import React from 'react';
-import useTypewriter from '../../../hooks/useTypewriter';
 import './Nav.css';
 
-const Nav = () => {
-  return <div id='mobileNav'>Corbin Taylor</div>;
+const Nav = ({navManager}) => {
+  return (
+  <div id='mobileNav'>
+    <div>Corbin Taylor</div>
+    <div onClick={()=>navManager('about')}>About</div>
+    <div onClick={()=>navManager('home')}>Home</div>
+  </div>)
 };
 
 export default Nav;
