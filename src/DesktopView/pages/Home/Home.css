@@ -1,0 +1,97 @@
+#cityscape {
+  display: flex;
+  flex-direction: row;
+  min-width: 100%;
+  justify-content: center;
+}
+
+.tower {
+  min-width: 5vw;
+  position: absolute;
+  bottom: 0;
+  margin: 0 10px;
+}
+
+.tower1 {
+  background: orange;
+  left: 2%;
+  height: 40vh;
+  min-width: 8vw;
+}
+
+.tower2 {
+  background: grey;
+  left: 10%;
+  height: 60vh;
+  min-width: 6vw;
+}
+
+.tower3 {
+  background: yellow;
+  left: 18%;
+  height: 55vh;
+  min-width: 12vw;
+}
+
+.tower3:hover {
+  background: green;
+  outline: 3px solid white;
+}
+
+.tower4 {
+  background: darkcyan;
+  left: 26%;
+  height: 50vh;
+  min-width: 7vw;
+}
+
+.tower5 {
+  background: darkmagenta;
+  left: 34%;
+  height: 65vh;
+  min-width: 7vw;
+}
+
+.tower6 {
+  background: darkorange;
+  left: 42%;
+  height: 60vh;
+  min-width: 9vw;
+}
+
+.tower7 {
+  background: violet;
+  left: 50%;
+  height: 70vh;
+}
+
+.tower8 {
+  background: aliceblue;
+  left: 58%;
+  height: 55vh;
+}
+
+.tower9 {
+  background: indianred;
+  left: 64%;
+  height: 65vh;
+}
+
+.tower10 {
+  background: lightgreen;
+  left: 74%;
+  height: 50vh;
+  min-width: 12vw;
+}
+
+.tower11 {
+  background: darkgoldenrod;
+  left: 84%;
+  height: 45vh;
+}
+
+.tower12 {
+  background: orangered;
+  left: 92%;
+  height: 50vh;
+}
