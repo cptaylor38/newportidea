@@ -8,6 +8,11 @@ import FAQ from './pages/FAQ/FAQ';
 
 const Desktop = () => {
   const [siteState, setSiteState] = useState('home');
+  const [hoverLink, setHoverLink] = useState('');
+
+  const hoverManager = (link)=>{
+    setHoverLink(link);
+  }
 
   const navManager = (selection)=> {
     setSiteState(selection);
@@ -16,7 +21,7 @@ const Desktop = () => {
   const displayManager = ()=> {
     switch(siteState){
       case 'home':
-        return <Home navManager={navManager}/>
+        return <Home navManager={navManager} hoverManager={hoverManager}/>
       case 'about':
         return <About />
       case 'portfolio':
@@ -29,11 +34,11 @@ const Desktop = () => {
   }
 
   return (
-    <>
-      <Nav navManager={navManager}/>
+    <div style={{maxWidth: '100vw', maxHeight: '100vh'}}>
+      <Nav navManager={navManager} hoverLink={hoverLink}/>
       <>{displayManager()}</>
       <Footer />
-    </>
+    </div>
   );
 };
 
