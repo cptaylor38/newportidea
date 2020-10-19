@@ -8,3 +8,7 @@
   padding: 1rem;
   max-width: 100vw;
 }
+
+#homeNavItem:hover {
+  font-size: 1.25em;
+}
