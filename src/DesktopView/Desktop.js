@@ -8,6 +8,7 @@ import FAQ from './pages/FAQ/FAQ';
 
 const Desktop = () => {
   const [siteState, setSiteState] = useState('home');
+  const [toggleNav, setToggle] = useState(false);
   const navManager = (selection)=> {
     setSiteState(selection);
   }
@@ -15,7 +16,7 @@ const Desktop = () => {
   const displayManager = ()=> {
     switch(siteState){
       case 'home':
-        return <Home navManager={navManager}/>
+        return <Home navManager={navManager} toggleNav={toggleNav} setToggle={setToggle}/>
       case 'about':
         return <About />
       case 'portfolio':
@@ -29,7 +30,7 @@ const Desktop = () => {
 
   return (
     <div style={{maxWidth: '100vw', maxHeight: '100vh'}}>
-      <Nav navManager={navManager}/>
+      <Nav navManager={navManager} toggleNav={toggleNav} setToggle={setToggle}/>
       <>{displayManager()}</>
       <Footer />
     </div>
