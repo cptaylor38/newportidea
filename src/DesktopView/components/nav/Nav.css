@@ -7,8 +7,45 @@
   font-size: 2rem;
   padding: 1rem;
   max-width: 100vw;
+  position: relative;
 }
 
 #homeNavItem:hover {
-  font-size: 1.25em;
+  color: rgb(70, 136, 199);
+  cursor: pointer;
+}
+
+#navBtn {
+  outline: none;
+  border: none;
+  font-size: 1.2em;
+  background: none;
+}
+
+#navBtn:hover {
+  cursor: pointer;
+}
+
+#navMenu {
+  position: absolute;
+  bottom: -150%;
+  right: 1%;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 2rem;
+  border-radius: 50%;
+  align-items: center;
+  margin: auto;
+  font-size: 0.75em;
+  background: radial-gradient(yellow, orange, rgb(212, 99, 6));
+}
+
+#navMenu > li {
+  list-style: none;
+}
+
+#navMenu > li:hover {
+  color: white;
+  cursor: pointer;
 }
