@@ -6,7 +6,7 @@ import './Nav.css';
 const Nav = ({navManager, setToggle, toggleNav}) => {
 
   return (
-  <div id='mobileNav'>
+  <div id='nav'>
     <div onClick={()=> {setToggle(false); navManager('home')}} id='homeNavItem'>Corbin Taylor</div>
     <button id='navBtn' onClick={()=> setToggle(!toggleNav)}>{toggleNav ? <ImCross /> : <GiHamburgerMenu />}</button>
     {toggleNav ? (<ul id='navMenu'>

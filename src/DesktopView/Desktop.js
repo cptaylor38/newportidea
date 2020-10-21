@@ -5,6 +5,7 @@ import Portfolio from './pages/Portfolio/Portfolio';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import FAQ from './pages/FAQ/FAQ';
+import './Desktop.css';
 
 const Desktop = () => {
   const [siteState, setSiteState] = useState('home');

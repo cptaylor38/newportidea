@@ -1,0 +1,23 @@
+#aboutCont {
+  background: teal;
+  min-height: 90vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  flex-basis: flex-start;
+  align-items: center;
+  padding-bottom: 10rem;
+}
+
+#selfie {
+  height: 15rem;
+  width: 18rem;
+  border-radius: 25%;
+  padding: 2rem;
+}
+
+.bioTxt {
+  max-width: 30vw;
+  font-size: 1.5rem;
+  padding: 2rem;
+}
