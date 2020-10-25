@@ -1,12 +1,48 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './About.css';
 const bioImage = require('../../../assets/images/selfieLinkedIn.png')
 
 const About = () => {
+    const [puzzleOrientation, setPuzzleOrientation] = useState({
+        p1: 270,
+        p2: 180,
+        p3: 0,
+        p4: 90
+    })
+
+    const rotatePiece = (piece, currentOrientation) => {
+        let orientation = currentOrientation + 90;
+        switch(piece){
+            case 'p1':
+                setPuzzleOrientation({...puzzleOrientation ,p1: orientation})
+                break;
+            case 'p2':
+                setPuzzleOrientation({...puzzleOrientation ,p2: orientation} )
+                break;
+            case 'p3':
+                setPuzzleOrientation({...puzzleOrientation ,p3: orientation})
+                break;
+            case 'p4':
+                setPuzzleOrientation({...puzzleOrientation ,p4: orientation})
+                break;
+            default:
+                return;
+        }
+    }
+
+
     return(
     <div id='aboutCont'>
-    <img src={bioImage} id='selfie'/>
-    
+    {/* <img src={bioImage} id='selfie'/> */}
+    <div id='pContainer'>
+    <div id='puzzleP1' onClick={()=> rotatePiece('p1', puzzleOrientation.p1)} style={{transform: `rotate(${puzzleOrientation.p1}deg)`}}>a</div>
+    <div id='puzzleP2' onClick={()=> rotatePiece('p2', puzzleOrientation.p2)} style={{transform: `rotate(${puzzleOrientation.p2}deg)`}}>a</div>
+    <div id='puzzleP3' onClick={()=> rotatePiece('p3', puzzleOrientation.p3)}style={{transform: `rotate(${puzzleOrientation.p3}deg)`}}>a</div>
+    <div id='puzzleP4' onClick={()=> rotatePiece('p4', puzzleOrientation.p4)}style={{transform: `rotate(${puzzleOrientation.p4}deg)`}}>a</div>
+    </div>
+    <div id='pPlacementCont'>
+
+    </div>
     </div>
     )
 }
