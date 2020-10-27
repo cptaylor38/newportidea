@@ -51,7 +51,13 @@ const About = () => {
         console.log(e.pageX, e.pageY, div)
         switch(div){
             case 'p1':
-                //set state
+                setPuzzleOrientation({...puzzleOrientation, p1: {...puzzleOrientation.p1, top: e.pageY, left: e.pageX}})
+            case 'p2':
+                setPuzzleOrientation({...puzzleOrientation, p2: {...puzzleOrientation.p2, top: e.pageY, left: e.pageX}})
+            case 'p3':
+                setPuzzleOrientation({...puzzleOrientation, p3: {...puzzleOrientation.p3, top: e.pageY, left: e.pageX}})
+            case 'p4':
+                setPuzzleOrientation({...puzzleOrientation, p4: {...puzzleOrientation.p4, top: e.pageY, left: e.pageX}})
             default:
                 return;
         }
