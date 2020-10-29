@@ -57,13 +57,16 @@ const About = () => {
         e.preventDefault();
     }
 
+    const handleDragEnd = (e)=> {
+        console.log(e);
+    }
+
     const onDrop = (e)=> {
         e.preventDefault();
     }
 
     const dragListener = (e, div) => {
         e.preventDefault();
-        console.log(e.pageX, e.pageY, div)
         switch(div){
             case 'p1':
                 setPuzzleOrientation({...puzzleOrientation, p1: {...puzzleOrientation.p1, top: e.pageY, left: e.pageX}})
@@ -82,10 +85,10 @@ const About = () => {
     <div id='aboutCont' onDragOver={e => onDragOver(e, 'reposition')}>
     {/* <img src={bioImage} id='selfie'/> */}
     <div id='pContainer'>
-    <div id='puzzleP1' className='puzzlePiece' onDrag={e => dragListener(e, 'p1')} onClick={()=> rotatePiece('p1', puzzleOrientation.p1.rotation)} style={{transform: `rotate(${puzzleOrientation.p1.rotation}deg)`, top: `${puzzleOrientation.p1.top}px`, left: `${puzzleOrientation.p1.left}px`}}>a</div>
-    <div id='puzzleP2' className='puzzlePiece' onDrag={e => dragListener(e, 'p2')} onClick={()=> rotatePiece('p2', puzzleOrientation.p2.rotation)} style={{transform: `rotate(${puzzleOrientation.p2.rotation}deg)`, top: `${puzzleOrientation.p2.top}px`, left: `${puzzleOrientation.p2.left}px`}}>a</div>
-    <div id='puzzleP3' className='puzzlePiece' onDrag={e => dragListener(e, 'p3')} onClick={()=> rotatePiece('p3', puzzleOrientation.p3.rotation)} style={{transform: `rotate(${puzzleOrientation.p3.rotation}deg)`, top: `${puzzleOrientation.p3.top}px`, left: `${puzzleOrientation.p3.left}px`}}>a</div>
-    <div id='puzzleP4' className='puzzlePiece' onDrag={e=> dragListener(e, 'p4')} onClick={()=> rotatePiece('p4', puzzleOrientation.p4.rotation)} style={{transform: `rotate(${puzzleOrientation.p4.rotation}deg)`, top: `${puzzleOrientation.p4.top}px`, left: `${puzzleOrientation.p4.left}px`}}>a</div>
+    <div id='puzzleP1' className='puzzlePiece' onDragEnd={(e)=> handleDragEnd(e)} onDrag={e => dragListener(e, 'p1')} onClick={()=> rotatePiece('p1', puzzleOrientation.p1.rotation)} style={{transform: `rotate(${puzzleOrientation.p1.rotation}deg)`, top: `${puzzleOrientation.p1.top}px`, left: `${puzzleOrientation.p1.left}px`}}>a</div>
+    <div id='puzzleP2' className='puzzlePiece' onDragEnd={(e)=> handleDragEnd(e)} onDrag={e => dragListener(e, 'p2')} onClick={()=> rotatePiece('p2', puzzleOrientation.p2.rotation)} style={{transform: `rotate(${puzzleOrientation.p2.rotation}deg)`, top: `${puzzleOrientation.p2.top}px`, left: `${puzzleOrientation.p2.left}px`}}>a</div>
+    <div id='puzzleP3' className='puzzlePiece' onDragEnd={(e)=> handleDragEnd(e)} onDrag={e => dragListener(e, 'p3')} onClick={()=> rotatePiece('p3', puzzleOrientation.p3.rotation)} style={{transform: `rotate(${puzzleOrientation.p3.rotation}deg)`, top: `${puzzleOrientation.p3.top}px`, left: `${puzzleOrientation.p3.left}px`}}>a</div>
+    <div id='puzzleP4' className='puzzlePiece' onDragEnd={(e)=> handleDragEnd(e)} onDrag={e=> dragListener(e, 'p4')} onClick={()=> rotatePiece('p4', puzzleOrientation.p4.rotation)} style={{transform: `rotate(${puzzleOrientation.p4.rotation}deg)`, top: `${puzzleOrientation.p4.top}px`, left: `${puzzleOrientation.p4.left}px`}}>a</div>
     </div>
     <div id='pPlacementCont' onDrop={e => onDrop(e)} onDragOver={e => onDragOver(e, 'deposit')}></div>
     </div>
