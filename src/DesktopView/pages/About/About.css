@@ -34,9 +34,10 @@
 
 .puzzlePiece {
   background-size: cover;
-  width: 10vw;
-  height: 10vh;
+  width: 20vw;
+  height: 20vh;
   position: absolute;
+  cursor: pointer;
 }
 
 #puzzleP1 {
@@ -69,8 +70,7 @@
 }
 
 #pPlacementCont {
-  width: 10vw;
-  height: 10vh;
+  width: 20vw;
+  height: 20vh;
   background: white;
-  padding: 2rem;
 }
